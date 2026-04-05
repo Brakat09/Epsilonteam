@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epsilon Team | الدليل الأكاديمي</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+    --red: #b71c1c;
+    --dark: #2d3436;
+    --bg: #fdfdfd;
+    --white: #ffffff;
+    --border: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* خلفية رموز رياضية متطورة */
+.math-bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: -1; opacity: 0.04;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" font-family="Arial" font-size="12" fill="black">∑</text><text x="50" y="20" font-family="Arial" font-size="12" fill="black">∫</text><text x="80" y="50" font-family="Arial" font-size="10" fill="black">π</text><text x="20" y="80" font-family="Arial" font-size="12" fill="black">√</text><text x="60" y="85" font-family="Arial" font-size="10" fill="black">∞</text><text x="40" y="50" font-family="Arial" font-size="10" fill="black">f(x)</text></svg>');
+}
+
+/* --- الهيدر الجديد --- */
+.header {
+    text-align: center;
+    padding: 70px 20px 50px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, var(--bg) 100%);
+    border-bottom: 1px solid #eee;
+}
+
+.logo-main {
+    width: 180px; /* تكبير الشعار */
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.12));
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 10px 0;
+    color: var(--dark);
+}
+
+.header h1 span { color: var(--red); }
+
+.team-bio {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #57606f;
+    font-weight: 400;
+}
+
+.guide-badge {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(183, 28, 28, 0.25);
+}
+
+/* مربع البحث */
+.search-wrapper {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(253, 253, 253, 0.98);
+    padding: 15px 20px; backdrop-filter: blur(10px);
+    border-bottom: 1px solid #f1f1f1;
+}
+.search-box { max-width: 550px; margin: auto; }
+.search-box input {
+    width: 100%; padding: 15px 25px; border-radius: 15px;
+    border: 1px solid var(--border); font-size: 1.05rem; outline: none;
+    text-align: center; background: var(--white); font-family: 'Tajawal', sans-serif;
+    transition: 0.3s;
+}
+.search-box input:focus { border-color: var(--red); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+/* الكروت */
+.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.card {
+    background: var(--white); border-radius: 25px; padding: 35px 25px;
+    text-align: center; border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+
+.doctor-avatar-link {
+    display: inline-block; margin-bottom: 20px; color: #f1f2f6; position: relative; text-decoration: none;
+}
+.doctor-avatar-link i { font-size: 70px; }
+.doctor-avatar-link .view-img {
+    position: absolute; bottom: 5px; right: 0; background: var(--red);
+    color: white; width: 28px; height: 28px; border-radius: 50%;
+    font-size: 13px; display: flex; align-items: center; justify-content: center;
+}
+
+.card h3 { margin: 0 0 15px; font-size: 1.4em; font-weight: 700; color: var(--dark); }
+
+.email-tag {
+    background: #f8f9fa; padding: 12px 15px; border-radius: 12px;
+    margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.9em; border: 1px solid #f1f1f1;
+}
+.copy-btn { color: var(--red); cursor: pointer; transition: 0.2s; }
+.copy-btn:hover { transform: scale(1.2); }
+
+.btns-group { display: flex; gap: 12px; }
+.btn {
+    flex: 1; padding: 15px; border-radius: 12px; border: none;
+    font-weight: 600; cursor: pointer; text-decoration: none; font-size: 0.95em;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-red { background: var(--red); color: white; }
+.btn-gray { background: #f1f3f5; color: var(--dark); }
+
+/* Modal */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 2000; }
+.modal-content { background: white; width: 90%; max-width: 360px; padding: 35px; border-radius: 30px; text-align: center; }
+.info-row { background: #f9f9f9; padding: 20px; border-radius: 15px; text-align: right; margin: 20px 0; }
+.info-row p { margin: 12px 0; font-size: 1.1em; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+#toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--dark); color: white; padding: 14px 30px; border-radius: 50px; display: none; z-index: 3000; }
+</style>
+</head>
+<body>
+
+<div class="math-bg"></div>
+
+<header class="header">
+    <img src="https://res.cloudinary.com/dpsw9nrr0/image/upload/v1775403010/Picsart_25-11-09_13-59-52-737_a7wz14.png" alt="Epsilon Logo" class="logo-main">
+    <h1>Epsilon <span>Team</span></h1>
+    <p class="team-bio">
+        نحنُ فريق طلابي تطوعي في قسم الرياضيات بجامعة العلوم والتكنولوجيا، نؤمن بأن المعرفة تزداد بالعطاء. نسعى جاهدين لدعم زملائنا أكاديمياً وتسهيل وصولهم للمعلومات بطرق حديثة ومبتكرة.
+    </p>
+    <div class="guide-badge">دليل مكاتب وأوقات الهيئة التدريسية</div>
+</header>
+
+<div class="search-wrapper">
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="ابحث عن اسم الدكتور..." onkeyup="searchDocs()">
+    </div>
+</div>
+
+<div class="container">
+    <div class="grid" id="grid"></div>
+</div>
+
+<div class="modal" id="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <h3 style="margin-bottom:15px; color:var(--red)">بيانات المراجعة</h3>
+        <div class="info-row">
+            <p><b>📍 المكتب:</b> <span id="offTxt"></span></p>
+            <p><b>🕒 الساعات المكتبية:</b> <span>موجودة على باب المكتب</span></p>
+        </div>
+        <button onclick="closeModal()" style="background:var(--dark); color:white; border:none; padding:15px; width:100%; border-radius:15px; cursor:pointer; font-weight:700; font-family:'Tajawal'">فهمت ذلك</button>
+    </div>
+</div>
+
+<div id="toast">تم نسخ الإيميل بنجاح 📧</div>
+
+<script>
+const doctors = [
+    {name:"د. عامر درويش", email:"ahdarweesh@just.edu.jo", office:"PH2 L1", img:"#"},
+    {name:"د. عبدالله ربابعه", email:"rababah@just.edu.jo", office:"D1 Level0", img:"#"},
+    {name:"د. عبد الرزاق مقدادي", email:"aamugdadi@just.edu.jo", office:"PH2 Level1", img:"#"},
+    {name:"د. ابراهيم الايوب", email:"iayyoub@just.edu.jo", office:"PH2 Level1", img:"#"},
+    {name:"د. كامل الخالد", email:"kamel@just.edu.jo", office:"23451", img:"#"},
+    {name:"د. خلدون الزعبي", email:"kfzoubi@just.edu.jo", office:"PH4", img:"#"},
+    {name:"د. خالد بطاينه", email:"khaledb@just.edu.jo", office:"D1 Level0", img:"#"},
+    {name:"د. محمود الرفاعي", email:"alrefaei@just.edu.jo", office:"PH2 L1", img:"#"},
+    {name:"د. محمود الصمادي", email:"smadi@just.edu.jo", office:"D1 Level1", img:"#"},
+    {name:"د. محمود الرواشده", email:"msalrawashdeh@just.edu.jo", office:"PH2 Level0", img:"#"},
+    {name:"د. مالك بطاينه", email:"msbataineh@just.edu.jo", office:"PH2 L-1", img:"#"},
+    {name:"د. مروان القرعان", email:"marwan04@just.edu.jo", office:"D3", img:"#"},
+    {name:"د. محمد الدولات", email:"mmaldolat@just.edu.jo", office:"PH2", img:"#"},
+    {name:"د. محمد شخاتره", email:"mkshakhatreh6@just.edu.jo", office:"PH2 Level1", img:"#"},
+    {name:"د. محمد علي", email:"myali@just.edu.jo", office:"PH4 Level0", img:"#"},
+    {name:"د. قتيبه خطاطبه", email:"qutaibeh@just.edu.jo", office:"D1 Level0", img:"#"},
+    {name:"د. صالح عبدالله", email:"sabdulah@just.edu.jo", office:"D3-L0", img:"#"},
+    {name:"د. سامر القور", email:"algore@just.edu.jo", office:"PH4 L-1", img:"#"},
+    {name:"د. امينه نصير", email:"anuseir@just.edu.jo", office:"D1-L0", img:"#"},
+    {name:"د. حنان حموري", email:"hmhammouri@just.edu.jo", office:"NA", img:"#"},
+    {name:"د. عماد جرادات", email:"iajaradat@just.edu.jo", office:"PH2 L-2", img:"#"},
+    {name:"د. سماره سلطي", email:"samarah@just.edu.jo", office:"PH4 L-1", img:"#"},
+    {name:"د. احمد زيتون", email:"amzytoon@just.edu.jo", office:"PH1 L1", img:"#"},
+    {name:"د. عصام الدرابسه", email:"imaldarabsah@just.edu.jo", office:"غير محدد", img:"#"},
+    {name:"د. عمر مصلح", office:"غير محدد", email:"oomusleh@just.edu.jo", img:"#"},
+    {name:"د. صفاء الشياب", office:"غير محدد", email:"smalsheyab6@just.edu.jo", img:"#"},
+    {name:"د. هيام البطاينة", office:"غير محدد", email:"hiym@just.edu.jo", img:"#"},
+    {name:"د. رؤوفه الصعيدي", office:"غير محدد", email:"raofe@just.edu.jo", img:"#"},
+    {name:"د. شذى الغويري", office:"غير محدد", email:"soalghueiri@just.edu.jo", img:"#"},
+    {name:"د. انعام نصيرات", office:"غير محدد", email:"imnuseir@just.edu.jo", img:"#"},
+    {name:"د. عصام ابو ارواق", office:"غير محدد", email:"imabuirwaq@just.edu.jo", img:"#"}
+];
+
+function render(list) {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = '';
+    list.forEach(d => {
+        grid.innerHTML += `
+            <div class="card">
+                <a href="${d.img}" class="doctor-avatar-link">
+                    <i class="fas fa-user-circle"></i>
+                    <div class="view-img"><i class="fas fa-image"></i></div>
+                </a>
+                <h3>${d.name}</h3>
+                <div class="email-tag">
+                    <span>${d.email}</span>
+                    <i class="fas fa-copy copy-btn" onclick="copyEmail('${d.email}')"></i>
+                </div>
+                <div class="btns-group">
+                    <a href="mailto:${d.email}" class="btn btn-red">
+                        <i class="fas fa-envelope-open-text"></i> إرسال بريد
+                    </a>
+                    <button class="btn btn-gray" onclick="openModal('${d.office}')">
+                        <i class="fas fa-door-open"></i> المكتب
+                    </button>
+                </div>
+            </div>`;
+    });
+}
+
+function searchDocs() {
+    const val = document.getElementById('searchInput').value.trim();
+    render(doctors.filter(d => d.name.includes(val)));
+}
+
+function openModal(off) {
+    document.getElementById('modal').style.display = 'flex';
+    document.getElementById('offTxt').innerText = off;
+}
+
+function closeModal() { document.getElementById('modal').style.display = 'none'; }
+
+function copyEmail(text) {
+    navigator.clipboard.writeText(text);
+    const t = document.getElementById('toast');
+    t.style.display = 'block';
+    setTimeout(() => t.style.display = 'none', 2000);
+}
+
+render(doctors);
+</script>
+
+</body>
+</html>
