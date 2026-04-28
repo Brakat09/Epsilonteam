@@ -1,89 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head> <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE4ZS202T2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZE4ZS202T2');
-</script>
+<head> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE4ZS202T2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZE4ZS202T2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Epsilon Team | دليل الهيئة التدريسية</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
-
-        :root {
-            --red: #b71c1c;
-            --dark: #2d3436;
-            --bg: #fdfdfd;
-            --white: #ffffff;
-            --border: #e0e0e0;
-        }
-
-        body {
-            margin: 0; font-family: 'Tajawal', sans-serif;
-            background-color: var(--bg); color: var(--dark);
-            display: flex; flex-direction: column; min-height: 100vh;
-        }
-
-        .math-bg {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: -1; opacity: 0.04;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" font-family="Arial" font-size="12">∑</text><text x="50" y="20" font-family="Arial" font-size="12">∫</text><text x="80" y="50" font-family="Arial" font-size="10">π</text><text x="20" y="80" font-family="Arial" font-size="12">√</text><text x="60" y="85" font-family="Arial" font-size="10">∞</text></svg>');
-        }
-
+        :root { --red: #b71c1c; --dark: #2d3436; --bg: #fdfdfd; --white: #ffffff; --border: #e0e0e0; }
+        body { margin: 0; font-family: 'Tajawal', sans-serif; background-color: var(--bg); color: var(--dark); display: flex; flex-direction: column; min-height: 100vh; }
+        .math-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; opacity: 0.04; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="30" font-family="Arial" font-size="12">∑</text><text x="50" y="20" font-family="Arial" font-size="12">∫</text><text x="80" y="50" font-family="Arial" font-size="10">π</text><text x="20" y="80" font-family="Arial" font-size="12">√</text><text x="60" y="85" font-family="Arial" font-size="10">∞</text></svg>'); }
         .header { text-align: center; padding: 60px 20px 40px; background: linear-gradient(to bottom, #f8f9fa 0%, var(--bg) 100%); }
         .logo-main { width: 160px; max-width: 50%; height: auto; margin-bottom: 20px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); }
         .header h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); margin: 10px 0; font-weight: 800; }
         .header h1 span { color: var(--red); }
         .team-bio { max-width: 750px; margin: 15px auto; font-size: 1.05rem; line-height: 1.7; color: #57606f; padding: 0 15px; }
         .guide-badge { display: inline-block; background: var(--red); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; margin-top: 15px; }
-
         .search-wrapper { position: sticky; top: 0; z-index: 1000; background: rgba(253, 253, 253, 0.98); padding: 15px; backdrop-filter: blur(10px); border-bottom: 1px solid #f1f1f1; }
         .search-box { max-width: 550px; margin: auto; }
         .search-box input { width: 100%; padding: 15px 25px; border-radius: 15px; border: 1px solid var(--border); font-size: 1rem; outline: none; text-align: center; font-family: 'Tajawal'; box-sizing: border-box; }
-
         .container { max-width: 1200px; margin: auto; padding: 30px 20px; flex: 1; width: 100%; box-sizing: border-box; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-
         .card { background: var(--white); border-radius: 20px; padding: 30px 20px; text-align: center; border: 1px solid var(--border); transition: 0.3s; position: relative; overflow: hidden; }
         .card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
-        
         .img-container { width: 110px; height: 110px; margin: 0 auto 20px; border-radius: 50%; border: 3px solid #f1f1f1; overflow: hidden; background: #fafafa; display: flex; align-items: center; justify-content: center; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; }
         .img-container i { font-size: 60px; color: #e0e0e0; }
-
         .card h3 { margin: 0 0 15px; font-size: 1.25rem; font-weight: 700; }
         .email-box { background: #f8f9fa; padding: 10px; border-radius: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; border: 1px solid #f1f1f1; }
         .copy-btn { color: var(--red); cursor: pointer; padding: 5px; }
-
         .btns-group { display: flex; gap: 10px; }
         .btn { flex: 1; padding: 12px; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; gap: 8px; }
         .btn-red { background: var(--red); color: white; }
         .btn-gray { background: #f1f3f5; color: var(--dark); }
-
         .footer { background: #fff; padding: 40px 20px; border-top: 1px solid #eee; text-align: center; margin-top: 50px; }
         .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
         .social-icons a { color: var(--dark); font-size: 1.3rem; transition: 0.3s; }
         .social-icons a:hover { color: var(--red); }
         .dev-link { display: inline-block; margin-top: 15px; color: var(--red); text-decoration: none; font-weight: 800; font-size: 0.85rem; padding: 6px 18px; border: 1.5px solid var(--red); border-radius: 25px; }
-
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 2000; padding: 15px; }
         .modal-content { background: white; width: 100%; max-width: 400px; padding: 30px; border-radius: 25px; text-align: center; }
         .time-row { display: block; padding: 8px 0; border-bottom: 1px dashed #eee; font-size: 0.9rem; text-align: right; }
         #toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--dark); color: white; padding: 12px 25px; border-radius: 50px; display: none; z-index: 3000; }
-
         @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
     <div class="math-bg"></div>
-
     <header class="header">
         <img src="https://res.cloudinary.com/dpsw9nrr0/image/upload/v1775403010/Picsart_25-11-09_13-59-52-737_a7wz14.png" alt="Epsilon Logo" class="logo-main">
         <h1>Epsilon <span>Team</span></h1>
@@ -126,64 +96,60 @@
     <div id="toast">تم نسخ الإيميل بنجاح 📧</div>
 
     <script>
-        function getID(email) { return email.split('@')[0]; }
-
         const doctors = [
             {name:"د. عامر درويش", email:"ahdarweesh@just.edu.jo", office:"PH2 L1", times:"الأحد، الثلاثاء، الخميس (10:00-11:00) | الإثنين، الأربعاء (13:00-14:30)"},
-            {name:"د. عبدالله ربابعه", email:"rababah@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (11:00-12:30) | الإثنين، الأربعاء (10:00-11:30)"},
-            {name:"د. عبد الرزاق مقدادي", email:"aamugdadi@just.edu.jo", office:"PH2 Level1", times:" الأحد، (11:00-12:00) |الاثنين(12:30-14:00) |الثلاثاء(9:15-10:00 و 11:00-12:00)| الخميس(9:15-10:00 و 11:00-12:00) )"},
             {name:"د. ابراهيم الايوب", email:"iayyoub@just.edu.jo", office:"PH2 Level1", times:"الأحد، الثلاثاء، الخميس (11:00-12:30) | الإثنين (12:00-13:30)"},
-            {name:"د. كامل الخالد", email:"kamel@just.edu.jo", office:"PH2 Level1", times:"الأحد، الثلاثاء (09:00-10:00) | الخميس (11:00-13:00)"},
-            {name:"د. خلدون الزعبي", email:"kfzoubi@just.edu.jo", office:"23451", times:"الأحد، الثلاثاء (14:00-15:30) | الإثنين، الأربعاء (09:00-10:30)"},
-            {name:"د. خالد بطاينه", email:"khaledb@just.edu.jo", office:"Ph4", times:"الأحد، الثلاثاء، الخميس (13:00-14:00) | الإثنين، الأربعاء (13:30-15:00)"},
-            {name:"د. محمود الرفاعي", email:"alrefaei@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (10:00-11:00 و 13:00-14:00) | الإثنين (11:30-12:30)"},
-            {name:"د. محمود الصمادي", email:"smadi@just.edu.jo", office:"PH2 L1", times:"الأحد، الثلاثاء (12:00-13:00) | الإثنين (11:00-13:00)"},
-            {name:"د. محمود الرواشده", email:"msalrawashdeh@just.edu.jo", office:"PH2 Level0", times:"الأحد، الثلاثاء، الخميس (12:00-13:00) | الإثنين (12:00-13:30)"},
-            {name:"د. مالك بطاينه", email:"msbataineh@just.edu.jo", office:"PH2 L-1", times:"الأحد، الثلاثاء (09:00-10:00) | الإثنين (10:30-13:00)"},
-            {name:"د. مروان القرعان", email:"marwan04@just.edu.jo", office:"D1, Level1", times:"الأحد، الثلاثاء، الخميس (10:00-11:30)"},
-            {name:"د. محمد الدولات", email:"mmaldolat@just.edu.jo", office:"PH2 Level0", times:"الأحد، الثلاثاء، الخميس (10:00-12:00)"},
-            {name:"د. محمد شخاتره", email:"mkshakhatreh6@just.edu.jo", office:"PH2 Level1", times:"الاثنين (12:00-13:30) | الثلاثاء، الخميس (11:00-13:00)"},
-            {name:"د. محمد علي", email:"myali@just.edu.jo", office:"Ph2 L-1", times:"الأحد، الثلاثاء (11:30-13:00)"},
-            {name:"د. قتيبه خطاطبه", email:"qutaibeh@just.edu.jo", office:"D3", times:"الأحد (11:00-13:00) | الإثنين (10:00-12:00)"},
-            {name:"د. صالح عبدالله", email:"sabdulah@just.edu.jo", office:"D3-L0", times:"الأحد، الثلاثاء (13:00-13:45) | الأربعاء (10:30-12:00) | الخميس (13:00-15:30)"},
-            {name:"د. سامر القور", email:"algore@just.edu.jo", office:"PH2", times:"الأحد، الثلاثاء، الخميس (11:00-12:00) | الإثنين (12:00-14:00)"},
-            {name:"د. امينه نصير", email:"anuseir@just.edu.jo", office:"PH2 Level1", times:"الإثنين، الأربعاء (10:00-11:30)"},
-            {name:"د. حنان حموري", email:"hmhammouri@just.edu.jo", office:"Ph4 level0", times:"الأحد، الثلاثاء (12:00-13:00) | الإثنين (11:30-14:30)"},
-            {name:"د. عماد جرادات", email:"iajaradat@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (11:00-12:00 و 14:00-15:00)"},
-            {name:"د.سلطي سمارة", email:"samarah@just.edu.jo", office:"PH4 L-1", times:"الإثنين، الأربعاء (12:00-13:30)"},
             {name:"د. احمد زيتون", email:"amzytoon@just.edu.jo", office:"PH1 L1", times:"الأحد، الثلاثاء (10:30-12:30) | الإثنين، الأربعاء (14:00-15:00)"},
-            {name:"د. عصام الدرابسه", email:"imaldarabsah@just.edu.jo", office:"D3-L0", times:"الأحد، الثلاثاء (13:00-14:00) | الإثنين (10:00-11:00)"},
-            
-            {name:"د. عمر مصلح", email:"oomusleh@just.edu.jo", office:"PH4 L-1", times:"الأحد (09:30-10:00 و 12:00-14:00) |الاثنين و الاربعاء (11.30-1200) |الثلاثاء (9:30-10:00 و 11:00-13:00)"},
-            {name:"د. صفاء الشياب", email:"smalsheyab6@just.edu.jo", office:"D1-L0", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الأربعاء، الخميس (15:00-16:00)"},
-            {name:"د. هيام البطاينة", email:"hiym@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء (10:00-11:00 و 13:00-14:00)"},
-            {name:"د. رؤوفه الصعيدي", email:"raofe@just.edu.jo", office:"PH2 L-2", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الإثنين (10:00-10:30)"},
-            
-            {name:"د. شذى الغويري", email:"soalghueiri@just.edu.jo", office:"PH4 L", times:"الإثنين، الأربعاء (10:30-12:00) | الثلاثاء (13:00-13:30)"},
             {name:"د. انعام نصيرات", email:"imnuseir@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء، الخميس (11:00-12:00) | الإثنين (10:30-12:00)"},
-            {name:"د. عصام ابو ارواق", email:"imabuirwaq@just.edu.jo", office:"PH1 L-1", times:"الإثنين، الأربعاء (13:00-14:00) | الثلاثاء (10:30-12:00)"}
+            {name:"د. حنان حموري", email:"hmhammouri@just.edu.jo", office:"Ph4 level0", times:"الأحد، الثلاثاء (12:00-13:00) | الإثنين (11:30-14:30) | الأربعاء (11:00-12:00)"},
+            {name:"د. خالد بطاينه", email:"khaledb@just.edu.jo", office:"Ph4", times:"الأحد، الثلاثاء، الخميس (13:00-14:00) | الإثنين، الأربعاء (13:30-15:00)"},
+            {name:"د. خلدون الزعبي", email:"kfzoubi@just.edu.jo", office:"23451", times:"الأحد، الثلاثاء (14:00-15:30) | الإثنين، الأربعاء (09:00-10:30)"},
+            {name:"د. رؤوفه الصعيدي", email:"raofe@just.edu.jo", office:"PH2 L-2", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الإثنين (10:00-10:30) | الأربعاء (13:30-14:30)"},
+            {name:"د. سامر القور", email:"algore@just.edu.jo", office:"PH2", times:"الأحد، الثلاثاء، الخميس (11:00-12:00) | الإثنين (12:00-14:00) | الأربعاء (13:00-14:00)"},
+            {name:"د. شذى الغويري", email:"soalghueiri@just.edu.jo", office:"PH4 L-1", times:"الإثنين، الأربعاء (10:30-12:00 و 13:30-14:30) | الثلاثاء، الخميس (13:00-13:30)"},
+            {name:"د. صالح عبدالله", email:"sabdulah@just.edu.jo", office:"D3-L0", times:"الأحد، الثلاثاء (13:00-13:45) | الثلاثاء (09:00-09:30) | الأربعاء (10:30-12:00) | الخميس (13:00-15:30)"},
+            {name:"د. صفاء الشياب", email:"smalsheyab6@just.edu.jo", office:"D1-L0", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الأربعاء، الخميس (15:00-16:00)"}
+            {name:"د. عبد الرزاق مقدادي", email:"aamugdadi@just.edu.jo", office:"PH2 Level1", times:"الأحد، الثلاثاء، الخميس (11:00-12:00) | الإثنين (12:30-14:00) | الثلاثاء، الخميس (09:15-10:00)"},
+            {name:"د. عصام ابو ارواق", email:"imabuirwaq@just.edu.jo", office:"PH1 L1", times:"الأحد، الثلاثاء، الخميس (13:00-14:00) | الإثنين، الأربعاء (10:30-12:00)"},
+            {name:"د. عصام الدرابسه", email:"imaldarabsah@just.edu.jo", office:"D3-L0", times:"الأحد، الثلاثاء، الخميس (10:00-11:00) | الإثنين، الأربعاء (09:00-10:30)"},
+            {name:"د. عماد جرادات", email:"iajaradat@just.edu.jo", office:"D1 Level0", times:"الأحد، الإثنين، الثلاثاء، الأربعاء (11:00-12:00) | الأحد، الثلاثاء (14:00-15:00)"},
+            {name:"د. عمر مصلح", email:"oomusleh@just.edu.jo", office:"PH4 L-1", times:"الأحد (09:30-10:00 و 12:00-14:00) | الثلاثاء (09:30-10:00 و 11:00-13:00) | الإثنين، الأربعاء (11:30-12:00)"},
+            {name:"د. قتيبه خطاطبه", email:"qutaibeh@just.edu.jo", office:"D3", times:"الأحد (11:00-13:00) | الإثنين (10:00-12:00) | الثلاثاء، الأربعاء (11:00-12:00)"},
+            {name:"د. كامل الخالد", email:"kamel@just.edu.jo", office:"PH2 Level1", times:"الأحد، الثلاثاء (09:00-10:00) | الإثنين (10:00-12:00) | الأربعاء (11:00-12:00) | الخميس (11:00-13:00)"},
+            {name:"د. مالك بطاينه", email:"msbataineh@just.edu.jo", office:"PH2 L-1", times:"الأحد، الثلاثاء (09:00-10:00) | الإثنين (10:30-13:00) | الأربعاء (10:30-12:00)"},
+            {name:"د. محمد الدولات", email:"mmaldolat@just.edu.jo", office:"PH2 Level0", times:"الأحد، الثلاثاء، الخميس (10:00-12:00) | الإثنين (12:00-14:00)"},
+            {name:"د. محمد شخاتره", email:"mkshakhatreh6@just.edu.jo", office:"PH2 Level1", times:"الأحد (09:00-10:00) | الإثنين (12:00-13:30) | الثلاثاء، الخميس (11:00-13:00) | الأربعاء (09:30-10:30)"},
+            {name:"د. محمود الرفاعي", email:"alrefaei@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (10:00-11:00 و 13:00-14:00) | الإثنين (11:30-12:30) | الخميس (10:00-11:00)"},
+            {name:"د. محمود الرواشده", email:"msalrawashdeh@just.edu.jo", office:"PH2 Level0", times:"الأحد، الثلاثاء، الخميس (12:00-13:00) | الإثنين (12:00-13:30) | الأربعاء (10:30-12:00)"},
+            {name:"د. محمود الصمادي", email:"smadi@just.edu.jo", office:"PH2 L1", times:"الأحد، الثلاثاء (12:00-13:00) | الإثنين (11:00-13:00) | الأربعاء (11:00-12:00 و 13:00-14:00)"},
+            {name:"د. هيام البطاينة", email:"hiym@just.edu.jo", office:"غير محدد", times:"الأحد، الإثنين، الثلاثاء، الخميس (10:00-11:00) | الأحد، الثلاثاء (13:00-14:00)"},
+            {name:"د. عبدالله ربابعه", email:"rababah@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (11:00-12:30) | الإثنين، الأربعاء (10:00-11:30)"},
+            {name:"د. مروان القرعان", email:"marwan04@just.edu.jo", office:"D1, Level1", times:"الأحد، الثلاثاء، الخميس (10:00-11:30)"},
+            {name:"د. محمد علي", email:"myali@just.edu.jo", office:"Ph2 L-1", times:"الأحد، الثلاثاء (11:30-13:00)"},
+            {name:"د. امينه نصير", email:"anuseir@just.edu.jo", office:"PH2 Level1", times:"الإثنين، الأربعاء (10:00-11:30)"},
+            {name:"د.سلطي سمارة", email:"samarah@just.edu.jo", office:"PH4 L-1", times:"الإثنين، الأربعاء (12:00-13:30)"}
         ];
 
         function render(list) {
             const grid = document.getElementById('grid');
             grid.innerHTML = '';
             list.forEach(d => {
-                const id = getID(d.email);
-                const imgUrl = `https://services.just.edu.jo/JUSTHandlers/GetPortfolioImage.ashx?email=`;
+                const id = d.email.split('@')[0];
+                const imgUrl = `https://services.just.edu.jo/JUSTHandlers/GetPortfolioImage.ashx?email=${id}`;
                 grid.innerHTML += `
                     <div class="card">
                         <div class="img-container">
-                            <img src="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="${imgUrl}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fas fa-user-circle" style="display:none;"></i>
                         </div>
-                        <h3></h3>
+                        <h3>${d.name}</h3>
                         <div class="email-box">
-                            <span></span>
-                            <i class="fas fa-copy copy-btn" onclick="copyEmail('')"></i>
+                            <span>${d.email}</span>
+                            <i class="fas fa-copy copy-btn" onclick="copyEmail('${d.email}')"></i>
                         </div>
                         <div class="btns-group">
-                            <a href="mailto:" class="btn btn-red"><i class="fas fa-envelope"></i> بريد</a>
-                            <button class="btn btn-gray" onclick="openModal('', '', '')"><i class="fas fa-door-open"></i> المكتب</button>
+                            <a href="mailto:${d.email}" class="btn btn-red"><i class="fas fa-envelope"></i> بريد</a>
+                            <button class="btn btn-gray" onclick="openModal('${d.name}', '${d.office}', '${d.times}')"><i class="fas fa-door-open"></i> المكتب</button>
                         </div>
                     </div>`;
             });
@@ -191,7 +157,8 @@
 
         function searchDocs() {
             const val = document.getElementById('searchInput').value.trim();
-            render(doctors.filter(d => d.name.includes(val)));
+            const filtered = doctors.filter(d => d.name.includes(val));
+            render(filtered);
         }
 
         function openModal(name, off, times) {
@@ -201,7 +168,7 @@
             const list = document.getElementById('timesList');
             list.innerHTML = '';
             times.split('|').forEach(t => {
-                list.innerHTML += `<div class="time-row">• </div>`;
+                list.innerHTML += `<div class="time-row">• ${t.trim()}</div>`;
             });
         }
 
@@ -214,6 +181,8 @@
             setTimeout(() => t.style.display = 'none', 2000);
         }
 
-        render(doctors);
+        // تشغيل الرندر فور تحميل الصفحة
+        window.onload = () => { render(doctors); };
     </script>
 </body>
+</html>
