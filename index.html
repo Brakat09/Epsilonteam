@@ -152,16 +152,16 @@
             {name:"د. عماد جرادات", email:"iajaradat@just.edu.jo", office:"D1 Level0", times:"الأحد، الثلاثاء (11:00-12:00 و 14:00-15:00)"},
             {name:"د.سلطي سمارة", email:"samarah@just.edu.jo", office:"PH4 L-1", times:"الإثنين، الأربعاء (12:00-13:30)"},
             {name:"د. احمد زيتون", email:"amzytoon@just.edu.jo", office:"PH1 L1", times:"الأحد، الثلاثاء (10:30-12:30) | الإثنين، الأربعاء (14:00-15:00)"},
-            {name:"د. عصام الدرابسه", email:"imaldarabsah@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء (13:00-14:00) | الإثنين (10:00-11:00)"},
+            {name:"د. عصام الدرابسه", email:"imaldarabsah@just.edu.jo", office:"D3-L0", times:"الأحد، الثلاثاء (13:00-14:00) | الإثنين (10:00-11:00)"},
             
             {name:"د. عمر مصلح", email:"oomusleh@just.edu.jo", office:"PH4 L-1", times:"الأحد (09:30-10:00 و 12:00-14:00) |الاثنين و الاربعاء (11.30-1200) |الثلاثاء (9:30-10:00 و 11:00-13:00)"},
             {name:"د. صفاء الشياب", email:"smalsheyab6@just.edu.jo", office:"D1-L0", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الأربعاء، الخميس (15:00-16:00)"},
             {name:"د. هيام البطاينة", email:"hiym@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء (10:00-11:00 و 13:00-14:00)"},
-            {name:"د. رؤوفه الصعيدي", email:"raofe@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الإثنين (10:00-10:30)"},
+            {name:"د. رؤوفه الصعيدي", email:"raofe@just.edu.jo", office:"PH2 L-2", times:"الأحد، الثلاثاء (10:00-11:00 و 12:00-13:00) | الإثنين (10:00-10:30)"},
             
-            {name:"د. شذى الغويري", email:"soalghueiri@just.edu.jo", office:"غير محدد", times:"الإثنين، الأربعاء (10:30-12:00) | الثلاثاء (13:00-13:30)"},
+            {name:"د. شذى الغويري", email:"soalghueiri@just.edu.jo", office:"PH4 L", times:"الإثنين، الأربعاء (10:30-12:00) | الثلاثاء (13:00-13:30)"},
             {name:"د. انعام نصيرات", email:"imnuseir@just.edu.jo", office:"غير محدد", times:"الأحد، الثلاثاء، الخميس (11:00-12:00) | الإثنين (10:30-12:00)"},
-            {name:"د. عصام ابو ارواق", email:"imabuirwaq@just.edu.jo", office:"غير محدد", times:"الإثنين، الأربعاء (13:00-14:00) | الثلاثاء (10:30-12:00)"}
+            {name:"د. عصام ابو ارواق", email:"imabuirwaq@just.edu.jo", office:"PH1 L-1", times:"الإثنين، الأربعاء (13:00-14:00) | الثلاثاء (10:30-12:00)"}
         ];
 
         function render(list) {
@@ -169,21 +169,21 @@
             grid.innerHTML = '';
             list.forEach(d => {
                 const id = getID(d.email);
-                const imgUrl = `https://services.just.edu.jo/JUSTHandlers/GetPortfolioImage.ashx?email=${id}`;
+                const imgUrl = `https://services.just.edu.jo/JUSTHandlers/GetPortfolioImage.ashx?email=`;
                 grid.innerHTML += `
                     <div class="card">
                         <div class="img-container">
-                            <img src="${imgUrl}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <img src="" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <i class="fas fa-user-circle" style="display:none;"></i>
                         </div>
-                        <h3>${d.name}</h3>
+                        <h3></h3>
                         <div class="email-box">
-                            <span>${d.email}</span>
-                            <i class="fas fa-copy copy-btn" onclick="copyEmail('${d.email}')"></i>
+                            <span></span>
+                            <i class="fas fa-copy copy-btn" onclick="copyEmail('')"></i>
                         </div>
                         <div class="btns-group">
-                            <a href="mailto:${d.email}" class="btn btn-red"><i class="fas fa-envelope"></i> بريد</a>
-                            <button class="btn btn-gray" onclick="openModal('${d.name}', '${d.office}', '${d.times}')"><i class="fas fa-door-open"></i> المكتب</button>
+                            <a href="mailto:" class="btn btn-red"><i class="fas fa-envelope"></i> بريد</a>
+                            <button class="btn btn-gray" onclick="openModal('', '', '')"><i class="fas fa-door-open"></i> المكتب</button>
                         </div>
                     </div>`;
             });
@@ -201,7 +201,7 @@
             const list = document.getElementById('timesList');
             list.innerHTML = '';
             times.split('|').forEach(t => {
-                list.innerHTML += `<div class="time-row">• ${t.trim()}</div>`;
+                list.innerHTML += `<div class="time-row">• </div>`;
             });
         }
 
@@ -217,4 +217,3 @@
         render(doctors);
     </script>
 </body>
-</html>
