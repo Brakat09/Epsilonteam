@@ -1,100 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta http-equiv="refresh" content="3;url=https://office.levigroups.com">
-  
-  <title>LeviGroup | جاري التحويل</title>
-  
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;800&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #0A0A0A; /* الخلفية السوداء الفاخرة لـ LeviGroup */
-      color: #ffffff;
-      font-family: 'Tajawal', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .loader-container {
-      text-align: center;
-    }
-
-    /* تأثير نبض للشعار أثناء الانتظار */
-    .logo-img {
-      width: 130px;
-      height: auto;
-      margin-bottom: 25px;
-      animation: pulse 1.5s infinite ease-in-out; 
-    }
-
-    .brand-name {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin: 0 0 15px 0;
-      letter-spacing: 1px;
-    }
-
-    .brand-name span {
-      color: #D4AF37; /* اللون الذهبي الاحترافي */
-    }
-
-    .loading-text {
-      font-size: 1.1rem;
-      color: #A0A0A0;
-      font-weight: 500;
-      margin-bottom: 25px;
-    }
-
-    /* حلقة التحميل (Spinner) باللون الذهبي */
-    .spinner {
-      width: 42px;
-      height: 42px;
-      border: 3px solid rgba(212, 175, 55, 0.1);
-      border-radius: 50%;
-      border-top-color: #D4AF37;
-      margin: 0 auto;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(0.98); opacity: 0.8; }
-      50% { transform: scale(1.03); opacity: 1; }
-      100% { transform: scale(0.98); opacity: 0.8; }
-    }
-  </style>
-
-  <script>
-    // نظام تحويل احتياطي فوري بواسطة جافا سكريبت بعد 3 ثوانٍ (3000 ملي ثانية) لضمان العمل على جميع المتصفحات
-    setTimeout(function() {
-      window.location.href = "https://office.levigroups.com";
-    }, 3000);
-  </script>
-</head>
-<body>
-
-  <div class="loader-container">
-    <img class="logo-img" src="https://office.levigroups.com/logo.png" alt="LeviGroup Logo" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='block';">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جاري تحويلك...</title>
     
-    <div id="text-logo" style="display:none;">
-      <h1 class="brand-name">Levi<span>Group</span></h1>
-    </div>
+    <!-- التحويل التلقائي باستخدام Meta Refresh بعد 0 ثانية -->
+    <meta http-equiv="refresh" content="0;url=https://office.levigroups.com">
+    
+    <!-- التحويل الاحتياطي باستخدام JavaScript لضمان سرعة واستجابة التحويل -->
+    <script type="text/javascript">
+        window.location.href = "https://office.levigroups.com";
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px; direction: rtl;">
 
-    <div class="loading-text">جاري الانتقال إلى موقعنا الرسمي...</div>
-    <div class="spinner"></div>
-  </div>
+    <p>جاري تحويلك إلى الموقع... إذا لم يتم تحويلك تلقائيًا، <a href="https://office.levigroups.com">اضغط هنا</a>.</p>
 
 </body>
 </html>
